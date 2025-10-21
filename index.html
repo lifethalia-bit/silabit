@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fábrica de Palavras do Silabito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🏭 Fábrica de Palavras do Silabito</h1>
+      <div class="controls">
+        <label for="nivel">Nível:</label>
+        <select id="nivel">
+          <option value="1">Fácil</option>
+          <option value="2">Médio</option>
+          <option value="3">Difícil</option>
+        </select>
+        <button id="btn-start">Começar</button>
+        <div id="score">Pontuação: 0</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="word-area">
+        <div id="figure" class="figure">🖼️</div>
+        <h2 id="target-word">Palavra: -</h2>
+        <div id="drop-zone" class="drop-zone" aria-label="Campo de montagem" data-expected="">
+          <div class="placeholder">Arraste as sílabas aqui</div>
+        </div>
+      </section>
+
+      <section class="shelf">
+        <h3>Esteira de sílabas</h3>
+        <div id="syllables" class="syllables" aria-live="polite"></div>
+      </section>
+
+      <section class="feedback" id="feedback" aria-live="polite"></section>
+
+      <footer>
+        <button id="btn-check" class="primary" disabled>✅ Verificar</button>
+        <button id="btn-next" disabled>➡️ Próxima</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
